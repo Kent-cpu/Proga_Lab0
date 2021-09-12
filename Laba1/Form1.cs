@@ -14,18 +14,13 @@ namespace Laba1
 {
     public partial class Form1 : Form
     {
-        List<string> allPhone = new List<string>();
-
         public Form1()
         {
             InitializeComponent();
         }
 
-
-
         private void button1_Click(object sender, EventArgs e)
         {
-            // 9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999
             errorField.Text = "";
             outputAnswer.Text = "";
             double a, b, h, m;
@@ -56,24 +51,10 @@ namespace Laba1
 
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private bool validate(string[] meaning)
-        {
-
-            return true;
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void generationData()
         {
+            errorTask2.Text = "";
+            informationUsers.Text = "";
             string[] allSurname = { "Смирнов", "Иванов", "Сидоров", "Морозов", "Петров", "Лебедев", "Волков", "Зайцев", "Воробьев" };
             XmlDocument document = new XmlDocument();
             XmlDeclaration XmlDec = document.CreateXmlDeclaration("1.0", "utf-8", null);
@@ -81,9 +62,7 @@ namespace Laba1
             XmlElement allSub = document.CreateElement("Allsubscriber");
             document.AppendChild(allSub);
 
-
             Random rnd = new Random();
-
 
             for (int i = 0; i < 50; ++i)
             {
@@ -111,13 +90,10 @@ namespace Laba1
                 subscriber.AppendChild(phoneNubmer);
                 subscriber.AppendChild(yearInstallation);
 
-
                 document.DocumentElement.InsertAfter(subscriber, document.DocumentElement.LastChild);
 
             }
-
-
-            document.Save(@"C:\\Users\rusla\Desktop\Sub.xml");
+            document.Save(@"C:\\Users\rusla\Desktop\Users.xml");
         }
 
 
@@ -128,22 +104,21 @@ namespace Laba1
 
         private void findInfromation_Click(object sender, EventArgs e)
         {
-
             informationUsers.Text = "";
-            if (!File.Exists(@"C:\\Users\rusla\Desktop\Sub.xml"))
+            if (!File.Exists(@"C:\\Users\rusla\Desktop\Users.xml"))
             {
                 errorTask2.Text = "Файл не создан, сгенерируйте файл";
                 return;
             }
 
-            string[] textFile = File.ReadAllLines(@"C:\\Users\rusla\Desktop\Sub.xml");
+            string[] textFile = File.ReadAllLines(@"C:\\Users\rusla\Desktop\Users.xml");
             if (textFile.Length == 0)
             {
                 generationData();
             }
 
             XmlDocument document = new XmlDocument();
-            document.Load(@"C:\\Users\rusla\Desktop\Sub.xml");
+            document.Load(@"C:\\Users\rusla\Desktop\Users.xml");
             int coincidence = 0;
             XmlElement xRoot = document.DocumentElement;
 

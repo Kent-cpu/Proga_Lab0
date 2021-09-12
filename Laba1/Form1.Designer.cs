@@ -40,17 +40,17 @@ namespace Laba1
             this.button1 = new System.Windows.Forms.Button();
             this.outputAnswer = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.Task1 = new System.Windows.Forms.TabPage();
             this.errorField = new System.Windows.Forms.Label();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.Task2 = new System.Windows.Forms.TabPage();
+            this.errorTask2 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.findInfromation = new System.Windows.Forms.Button();
             this.generationDataBtn = new System.Windows.Forms.Button();
             this.informationUsers = new System.Windows.Forms.RichTextBox();
-            this.errorTask2 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
-            this.tabPage1.SuspendLayout();
-            this.tabPage2.SuspendLayout();
+            this.Task1.SuspendLayout();
+            this.Task2.SuspendLayout();
             this.SuspendLayout();
             // 
             // aField
@@ -59,7 +59,6 @@ namespace Laba1
             this.aField.Name = "aField";
             this.aField.Size = new System.Drawing.Size(167, 27);
             this.aField.TabIndex = 0;
-            this.aField.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // bField
             // 
@@ -67,7 +66,6 @@ namespace Laba1
             this.bField.Name = "bField";
             this.bField.Size = new System.Drawing.Size(167, 27);
             this.bField.TabIndex = 1;
-            this.bField.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // hField
             // 
@@ -134,40 +132,39 @@ namespace Laba1
             this.outputAnswer.AutoSize = true;
             this.outputAnswer.Location = new System.Drawing.Point(356, 262);
             this.outputAnswer.Name = "outputAnswer";
-            this.outputAnswer.Size = new System.Drawing.Size(18, 20);
+            this.outputAnswer.Size = new System.Drawing.Size(0, 20);
             this.outputAnswer.TabIndex = 9;
-            this.outputAnswer.Text = "g";
             // 
             // tabControl1
             // 
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.Task1);
+            this.tabControl1.Controls.Add(this.Task2);
             this.tabControl1.Location = new System.Drawing.Point(1, -1);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(798, 450);
             this.tabControl1.TabIndex = 10;
             // 
-            // tabPage1
+            // Task1
             // 
-            this.tabPage1.Controls.Add(this.errorField);
-            this.tabPage1.Controls.Add(this.button1);
-            this.tabPage1.Controls.Add(this.outputAnswer);
-            this.tabPage1.Controls.Add(this.aField);
-            this.tabPage1.Controls.Add(this.bField);
-            this.tabPage1.Controls.Add(this.label4);
-            this.tabPage1.Controls.Add(this.hField);
-            this.tabPage1.Controls.Add(this.label3);
-            this.tabPage1.Controls.Add(this.mField);
-            this.tabPage1.Controls.Add(this.label2);
-            this.tabPage1.Controls.Add(this.label1);
-            this.tabPage1.Location = new System.Drawing.Point(4, 29);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(790, 417);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "tabPage1";
-            this.tabPage1.UseVisualStyleBackColor = true;
+            this.Task1.Controls.Add(this.errorField);
+            this.Task1.Controls.Add(this.button1);
+            this.Task1.Controls.Add(this.outputAnswer);
+            this.Task1.Controls.Add(this.aField);
+            this.Task1.Controls.Add(this.bField);
+            this.Task1.Controls.Add(this.label4);
+            this.Task1.Controls.Add(this.hField);
+            this.Task1.Controls.Add(this.label3);
+            this.Task1.Controls.Add(this.mField);
+            this.Task1.Controls.Add(this.label2);
+            this.Task1.Controls.Add(this.label1);
+            this.Task1.Location = new System.Drawing.Point(4, 29);
+            this.Task1.Name = "Task1";
+            this.Task1.Padding = new System.Windows.Forms.Padding(3);
+            this.Task1.Size = new System.Drawing.Size(790, 417);
+            this.Task1.TabIndex = 0;
+            this.Task1.Text = "Task1";
+            this.Task1.UseVisualStyleBackColor = true;
             // 
             // errorField
             // 
@@ -175,24 +172,32 @@ namespace Laba1
             this.errorField.ForeColor = System.Drawing.Color.Red;
             this.errorField.Location = new System.Drawing.Point(356, 183);
             this.errorField.Name = "errorField";
-            this.errorField.Size = new System.Drawing.Size(41, 20);
+            this.errorField.Size = new System.Drawing.Size(0, 20);
             this.errorField.TabIndex = 10;
-            this.errorField.Text = "error";
             // 
-            // tabPage2
+            // Task2
             // 
-            this.tabPage2.Controls.Add(this.errorTask2);
-            this.tabPage2.Controls.Add(this.label5);
-            this.tabPage2.Controls.Add(this.findInfromation);
-            this.tabPage2.Controls.Add(this.generationDataBtn);
-            this.tabPage2.Controls.Add(this.informationUsers);
-            this.tabPage2.Location = new System.Drawing.Point(4, 29);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(790, 417);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Узнать информацию об абонентах";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            this.Task2.Controls.Add(this.errorTask2);
+            this.Task2.Controls.Add(this.label5);
+            this.Task2.Controls.Add(this.findInfromation);
+            this.Task2.Controls.Add(this.generationDataBtn);
+            this.Task2.Controls.Add(this.informationUsers);
+            this.Task2.Location = new System.Drawing.Point(4, 29);
+            this.Task2.Name = "Task2";
+            this.Task2.Padding = new System.Windows.Forms.Padding(3);
+            this.Task2.Size = new System.Drawing.Size(790, 417);
+            this.Task2.TabIndex = 1;
+            this.Task2.Text = "Task2";
+            this.Task2.UseVisualStyleBackColor = true;
+            // 
+            // errorTask2
+            // 
+            this.errorTask2.AutoSize = true;
+            this.errorTask2.ForeColor = System.Drawing.Color.Red;
+            this.errorTask2.Location = new System.Drawing.Point(353, 85);
+            this.errorTask2.Name = "errorTask2";
+            this.errorTask2.Size = new System.Drawing.Size(0, 20);
+            this.errorTask2.TabIndex = 13;
             // 
             // label5
             // 
@@ -231,15 +236,6 @@ namespace Laba1
             this.informationUsers.TabIndex = 0;
             this.informationUsers.Text = "";
             // 
-            // errorTask2
-            // 
-            this.errorTask2.AutoSize = true;
-            this.errorTask2.Location = new System.Drawing.Point(293, 89);
-            this.errorTask2.Name = "errorTask2";
-            this.errorTask2.Size = new System.Drawing.Size(16, 20);
-            this.errorTask2.TabIndex = 13;
-            this.errorTask2.Text = "с";
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -249,10 +245,10 @@ namespace Laba1
             this.Name = "Form1";
             this.Text = "h";
             this.tabControl1.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
-            this.tabPage1.PerformLayout();
-            this.tabPage2.ResumeLayout(false);
-            this.tabPage2.PerformLayout();
+            this.Task1.ResumeLayout(false);
+            this.Task1.PerformLayout();
+            this.Task2.ResumeLayout(false);
+            this.Task2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -270,8 +266,8 @@ namespace Laba1
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label outputAnswer;
         private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.TabPage Task1;
+        private System.Windows.Forms.TabPage Task2;
         private System.Windows.Forms.Label errorField;
         private System.Windows.Forms.Button generationDataBtn;
         private System.Windows.Forms.RichTextBox informationUsers;
